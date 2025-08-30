@@ -81,56 +81,59 @@ $listName = [
         View::share('phut', $phut);
         View::share('rd', $rd);
 
-        $counts = DB::table('accounts')
+        if (Schema::hasTable('accounts')) {
+            $counts = DB::table('accounts')
             ->selectRaw("
-                SUM(CASE WHEN price BETWEEN 0 AND 500000 THEN 1 ELSE 0 END) as range_0_500k,
-                SUM(CASE WHEN price BETWEEN 500001 AND 1000000 THEN 1 ELSE 0 END) as range_500k_1m,
-                SUM(CASE WHEN price BETWEEN 1000001 AND 3000000 THEN 1 ELSE 0 END) as range_1m_3m,
-                SUM(CASE WHEN price BETWEEN 3000001 AND 5000000 THEN 1 ELSE 0 END) as range_3m_5m,
-                SUM(CASE WHEN price BETWEEN 5000001 AND 10000000 THEN 1 ELSE 0 END) as range_5m_10m,
-                SUM(CASE WHEN price BETWEEN 10000000 AND 990000000 THEN 1 ELSE 0 END) as range_above_10m
-            ")
-            ->first();
+                    SUM(CASE WHEN price BETWEEN 0 AND 500000 THEN 1 ELSE 0 END) as range_0_500k,
+                    SUM(CASE WHEN price BETWEEN 500001 AND 1000000 THEN 1 ELSE 0 END) as range_500k_1m,
+                    SUM(CASE WHEN price BETWEEN 1000001 AND 3000000 THEN 1 ELSE 0 END) as range_1m_3m,
+                    SUM(CASE WHEN price BETWEEN 3000001 AND 5000000 THEN 1 ELSE 0 END) as range_3m_5m,
+                    SUM(CASE WHEN price BETWEEN 5000001 AND 10000000 THEN 1 ELSE 0 END) as range_5m_10m,
+                    SUM(CASE WHEN price BETWEEN 10000000 AND 990000000 THEN 1 ELSE 0 END) as range_above_10m
+                ")
+                ->first();
+            
+            $global_list = [
+                [
+                    'title' => 'Acc Đột Kích dưới 500k',
+                    'link' => url('/shop-acc-dot-kich.html?price=0k-500k&type=1'),
+                    'description' => 'Số account hiện có: '. $counts->range_0_500k,
+                    'bgr' => asset('/images/siu_co.gif'),
+                ],
+                [
+                    'title' => 'Acc Đột Kích 500k - 1tr',
+                    'link' => url('/shop-acc-dot-kich.html?price=500k-1tr&type=1'),
+                    'description' => 'Số account hiện có: '. $counts->range_500k_1m,
+                    'bgr' => asset('/images/siu_re.gif'),
+                ],
+                [
+                    'title' => 'Acc Đột Kích 1tr - 3tr',
+                    'link' => url('/shop-acc-dot-kich.html?price=1tr-3tr&type=1'),
+                    'description' => 'Số account hiện có: '. $counts->range_1m_3m,
+                    'bgr' => asset('/images/siu_re.gif'),
+                ],
+                [
+                    'title' => 'Acc Đột Kích 3tr - 5tr',
+                    'link' => url('/shop-acc-dot-kich.html?price=3tr-5tr&type=1'),
+                    'description' => 'Số account hiện có: '. $counts->range_3m_5m,
+                    'bgr' => asset('/images/siu_re.gif'),
+                ],
+                [
+                    'title' => 'Acc Đột Kích 5tr - 10tr',
+                    'link' => url('/shop-acc-dot-kich.html?price=5tr-10tr&type=1'),
+                    'description' => 'Số account hiện có: '. $counts->range_5m_10m,
+                    'bgr' => asset('/images/siu_vip.gif'),
+                ],
+                [
+                    'title' => 'Acc Đột Kích 10tr trở lên',
+                    'link' => url('/shop-acc-dot-kich.html?price=10tr>&type=1'),
+                    'description' => 'Số account hiện có: '. $counts->range_above_10m,
+                    'bgr' => asset('/images/siu_vip.gif'),
+                ],
+            ];
+            View::share('global_list', $global_list);
+        }
         
-        $global_list = [
-            [
-                'title' => 'Acc Đột Kích dưới 500k',
-                'link' => url('/shop-acc-dot-kich.html?price=0k-500k&type=1'),
-                'description' => 'Số account hiện có: '. $counts->range_0_500k,
-                'bgr' => asset('/images/siu_co.gif'),
-            ],
-            [
-                'title' => 'Acc Đột Kích 500k - 1tr',
-                'link' => url('/shop-acc-dot-kich.html?price=500k-1tr&type=1'),
-                'description' => 'Số account hiện có: '. $counts->range_500k_1m,
-                'bgr' => asset('/images/siu_re.gif'),
-            ],
-            [
-                'title' => 'Acc Đột Kích 1tr - 3tr',
-                'link' => url('/shop-acc-dot-kich.html?price=1tr-3tr&type=1'),
-                'description' => 'Số account hiện có: '. $counts->range_1m_3m,
-                'bgr' => asset('/images/siu_re.gif'),
-            ],
-            [
-                'title' => 'Acc Đột Kích 3tr - 5tr',
-                'link' => url('/shop-acc-dot-kich.html?price=3tr-5tr&type=1'),
-                'description' => 'Số account hiện có: '. $counts->range_3m_5m,
-                'bgr' => asset('/images/siu_re.gif'),
-            ],
-            [
-                'title' => 'Acc Đột Kích 5tr - 10tr',
-                'link' => url('/shop-acc-dot-kich.html?price=5tr-10tr&type=1'),
-                'description' => 'Số account hiện có: '. $counts->range_5m_10m,
-                'bgr' => asset('/images/siu_vip.gif'),
-            ],
-            [
-                'title' => 'Acc Đột Kích 10tr trở lên',
-                'link' => url('/shop-acc-dot-kich.html?price=10tr>&type=1'),
-                'description' => 'Số account hiện có: '. $counts->range_above_10m,
-                'bgr' => asset('/images/siu_vip.gif'),
-            ],
-        ];
-        View::share('global_list', $global_list);
 
         Schema::defaultStringLength(191);
     }
