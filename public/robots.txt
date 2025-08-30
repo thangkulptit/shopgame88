@@ -1,0 +1,6 @@
+Disallow: /login
+Disallow: /admin/home
+Disallow: /admin/accounts
+Disallow: /admin/
+Disallow: /lich-su-giao-dich
+Sitemap: https://banaccuytin.com/sitemap.xml

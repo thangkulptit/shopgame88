@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Http\Controllers\front;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class PageController extends Controller
+{
+    public function getViewIndex() {
+        return view('frontend/dieu-khoan');
+    }
+}
