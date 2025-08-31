@@ -5,7 +5,7 @@
             @foreach ($global_list as $index => $item)
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="classWithPad position-relative">
-                <img src="{{ asset('frontend/images/yasuo-hinh.png') }}" style="height: 64px; position: absolute; width: 52px; left: 8px; top: -6px;" alt="Card Image">
+                <img src="{{ asset('frontend/images/yasuo-hinh.png') }}" style="height: 64px; position: absolute; width: 52px; left: 12px; top: -6px;" alt="Card Image">
                 <div class="news_image">
                     <a href="{{$item['link']}}" class=""><img style="height: 200px;" src="{{$item['bgr']}}"></a>
                 </div>
