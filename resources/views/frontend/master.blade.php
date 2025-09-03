@@ -323,7 +323,8 @@
             <p>Uy tín tạo nên thương hiệu lớn nhất Việt Nam.
                 Việt Nam</p>
             <p><i class="fa fa-map-pin"></i> Bắc Ninh </p>
-            <p><i class="fa fa-phone"></i> Phone(Zalo) : 0703.989.888</p>
+            <p><i class="fa fa-phone"></i> Phone(Zalo) A Tuấn : 0703.989.888</p>
+            <p><i class="fa fa-phone"></i> Phone(Zalo) E Việt : 0879.392.888</p>
             {{-- <p><i class="fa fa-envelope"></i> E-mail : banaccuytin@gmail.com</p> --}}
 
         </div>

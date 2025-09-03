@@ -1,8 +1,8 @@
 @extends('frontend.master')
-@section('title', 'Những giao dịch gần đây của shop Banaccuytin.com')
+@section('title', 'Những giao dịch gần đây của shop shopgame88.com')
 @section('description', 'Những giao dịch gần đây của shop, nơi mua bán acc liên quân giá rẻ uy tín hàng đầu việt nam,
 acc liên quân cực vip chỉ có 20k, 30k, 40k, 50k')
-@section('keywords', 'banaccuytin.com')
+@section('keywords', 'shopgame88.com')
 @section('main')
 
 <div class="container">

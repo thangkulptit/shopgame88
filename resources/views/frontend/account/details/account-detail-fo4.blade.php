@@ -1,6 +1,6 @@
 @extends('frontend.master')
 @section('title', 'Chi tiết mua acc Fifa online 4')
-@section('description', 'Mua Nick fifa online 4, chỉ có tại Shop banaccuytin.com, cập nhật thường xuyên những acc fifa online 4 khủng nhất , ngon nhất, uy tín được giới thiệu bởi các streamer')
+@section('description', 'Mua Nick fifa online 4, chỉ có tại Shop shopgame88.com, cập nhật thường xuyên những acc fifa online 4 khủng nhất , ngon nhất, uy tín được giới thiệu bởi các streamer')
 @section('keywords', 'mua nick fifa online 4, shopaccfo4, shop fifa online 4, shop fo4, shop acc ff, mua acc fo4 gia re, uy tin')
 @section('main')
 

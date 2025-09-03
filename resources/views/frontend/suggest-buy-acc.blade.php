@@ -9,7 +9,7 @@ acc liên quân cực vip chỉ có 20k, 30k, 40k, 50k')
     <div class="sl-dtprmain">
         
          <ul class="sa-brea">
-            <li><a href="/" title=""><h1>HƯỚNG DẪN MUA ACC TẠI BANACCUYTIN.COM</h1></a></li>
+            <li><a href="/" title=""><h1>HƯỚNG DẪN MUA ACC TẠI shopgame88.COM</h1></a></li>
             <li class="active"><a href="javascript:;" title="">Hướng dẫn mua Acc</a></li>
         </ul>
         <p> Xin chào anh em, ngày hôm nay mình xin phép được giới thiệu anh em Mua Acc tại Shop Của mình, cực kỳ đơn giản thôi nhé :) </p> </br>
