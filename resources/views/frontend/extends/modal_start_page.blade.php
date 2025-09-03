@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal_start_page" role="dialog">
+{{-- <div class="modal fade" id="modal_start_page" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
@@ -28,4 +28,4 @@
         localStorage.setItem('modal', '1');
     }
     
-  </script>
+  </script> --}}
