@@ -98,6 +98,10 @@ label {
     height: 85px;
     background: url(../images/bghd.jpg) center #000
 }
+.sl-header22 {
+    height: 300px;
+    background: url(../images/bghd.jpg) center #000
+}
 
 .sl-logo {
     display: inline-block;

@@ -373,7 +373,7 @@
     {{-- <div class="sl-footer">
         @include('frontend/extends/comment')
     </div> --}}
-    <footer style="border-top: 1px solid;">
+    <footer style="border-top: 1px solid;" class="sl-header22">
         @include('frontend/extends/modal_start_page')
         {{-- <div class="container">
                   <div class="row"> --}}
