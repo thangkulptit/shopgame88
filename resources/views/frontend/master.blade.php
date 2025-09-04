@@ -195,9 +195,40 @@
             @endif
         </div>
     </div>
-    <div class="sl-hdtop">
+    <div class="sllpbox">
+          <style>
+            .banner {
+            background-color: #0d6efd; /* Màu nền Bootstrap primary */
+            color: #fff;
+            padding: 12px 0;
+            overflow: hidden;
+            position: relative;
+            height: 60px;
+            }
+            .banner-title {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 1.25rem;
+            font-weight: bold;
+            animation: slideText 10s linear infinite;
+            }
+            @keyframes slideText {
+            0%   { left: -100%; }
+            100% { left: 100%; }
+            }
+        </style>
+        
+          <div class="banner">
+            <div class="container position-relative">
+            <span class="banner-title">
+                🎉 Chào mừng bạn đến với Shopgame88.Com! Mua bán, cầm cố, treo acc CF Bán GO - Cày Item AI giá rẻ | Liên hệ ngay Zalo để nhận tư vấn🎉
+            </span>
+            </div>
+        </div>
         <div class="container">
-            <div class="sl-boxs">
+
+            {{-- <h2></h2> --}}
+            {{-- <div class="sl-boxs">
                 <div class="sl-row clearfix">
                     <div class="sl-col sl-col1">
                         <div class="sl-hdcbox">
@@ -282,14 +313,14 @@
                                     {{-- <iframe height="400" src="https://www.youtube.com/embed/hrcoBPfLXaM"
                                         width="100%"></iframe> --}}
                                     {{-- <img src="https://www.upsieutoc.com/images/2019/07/09/shopacc.png"
-                                        style="height: 350px;width: 785px;"> --}}
-                                    <!-- <img src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t31.0-8/26232766_136956847097528_2732797481514157742_o.jpg?_nc_cat=107&amp;oh=f87fdad15a4df7f22bd0f3e5cb28285e&amp;oe=5C1F5A05" style="height: 350px;"> -->
+                                        style="height: 350px;width: 785px;"> 
+                                    <img src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t31.0-8/26232766_136956847097528_2732797481514157742_o.jpg?_nc_cat=107&amp;oh=f87fdad15a4df7f22bd0f3e5cb28285e&amp;oe=5C1F5A05" style="height: 350px;"> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
@@ -297,28 +328,28 @@
     @include('frontend/extends/modal_register_login')
           <!-- Icon Zalo và Facebook -->
   <div class="social-icons">
-    <div class="shop-flex">
-    <div class="shop-flex" style="flex-direction: column;">
-        <a href="https://zalo.me/0703989888" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1024px-Icon_of_Zalo.svg.png" alt="Zalo 1">
+    <div class="shop-flex" style="display: flex !important;">
+        <div class="shop-flex" style="display: flex; flex-direction: column; width: auto;">
+            <a href="https://zalo.me/0703989888" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1024px-Icon_of_Zalo.svg.png" alt="Zalo 1">
+            </a>
+            <strong>Gặp A Tuấn</strong>
+        </div>
+
+        <div class="shop-flex" style="margin-left: 64px; display: flex; flex-direction: column;  width: auto;">
+            <a href="https://zalo.me/0879392888" target="_blank" >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1024px-Icon_of_Zalo.svg.png" alt="Zalo 1">
+            </a>
+            <strong>Gặp E Việt</strong>
+        </div>
+
+        {{-- <a href="https://www.facebook.com/leanhtuan8886" target="_blank" style="margin-left: 64px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a> --}}
+
+        <a href="tel:0703989888" title="Gọi ngay: 0379 439 678" style="margin-left: 64px;  width: auto;">
+        <img src="data:image/png;base64,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" class="fas fa-phone"></i>
         </a>
-        <strong>Gặp A Tuấn</strong>
-    </div>
-
-    <div class="shop-flex" style="margin-left: 64px; flex-direction: column;">
-        <a href="https://zalo.me/0879392888" target="_blank" >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1024px-Icon_of_Zalo.svg.png" alt="Zalo 1">
-        </a>
-        <strong>Gặp E Việt</strong>
-    </div>
-
-    {{-- <a href="https://www.facebook.com/leanhtuan8886" target="_blank" style="margin-left: 64px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-    </a> --}}
-
-    <a href="tel:0703989888" title="Gọi ngay: 0379 439 678" style="margin-left: 64px;">
-      <img src="data:image/png;base64,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" class="fas fa-phone"></i>
-    </a>
     </div>
   </div>
     </div>
