@@ -96,6 +96,22 @@
             -o-user-select: none;
             user-select: none;
         }
+        .banner-img {
+            overflow: hidden;
+            border-radius: 20px;
+            }
+
+            .banner-img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            }
+
+            .banner-img-text {
+            background: rgba(0, 0, 0, 0.5); /* nền mờ để chữ dễ đọc */
+            padding: 20px;
+            border-radius: 10px;
+            }
     </style>
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -195,10 +211,9 @@
             @endif
         </div>
     </div>
-    <div class="sllpbox">
+    <div class="sl-prodbox">
           <style>
             .banner {
-            background-color: #0d6efd; /* Màu nền Bootstrap primary */
             color: #fff;
             padding: 12px 0;
             overflow: hidden;
@@ -213,8 +228,8 @@
             animation: slideText 10s linear infinite;
             }
             @keyframes slideText {
-            0%   { left: -100%; }
-            100% { left: 100%; }
+            0%   { left: 100%; }
+            100% { left: -100%; }
             }
         </style>
         
