@@ -282,13 +282,11 @@
         }
         
         .content_flex {
-            flex: 0 0 calc(33.333% - 10px);
-            max-width: 200px;
+            width: 100%;
         }
         
         .content_flex img {
             width: 100%;
-            height: 150px;
             object-fit: cover;
             border-radius: 8px;
             cursor: pointer;

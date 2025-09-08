@@ -211,7 +211,7 @@
             @endif
         </div>
     </div>
-    <div class="sl-prodbox">
+        <div class="sl-prodbox">
           <style>
             .banner {
             color: #fff;
@@ -232,15 +232,8 @@
             100% { left: -100%; }
             }
         </style>
-        
-          <div class="banner">
-            <div class="container position-relative">
-            <span class="banner-title">
-                🎉 Chào mừng bạn đến với Shopgame88.Com! Mua bán, cầm cố, treo acc CF Bán GO - Cày Item AI giá rẻ | Liên hệ ngay Zalo để nhận tư vấn🎉
-            </span>
-            </div>
-        </div>
-        <div class="container">
+
+         <div class="container">
 
             {{-- <h2></h2> --}}
             {{-- <div class="sl-boxs">
@@ -337,7 +330,39 @@
                 </div>
             </div> --}}
         </div>
+        
+          <div class="banner">
+            <div class="container position-relative">
+            <span class="banner-title">
+                🎉 Chào mừng bạn đến với Shopgame88.Com! Mua bán, cầm cố, treo acc CF Bán GO - Cày Item AI giá rẻ | Liên hệ ngay Zalo để nhận tư vấn🎉
+            </span>
+            </div>
+        </div>
+       
     </div>
+    <div class="container banner-container">
+        <div class="banner-section position-relative">
+            <!-- Thay đổi src thành đường dẫn hình ảnh của bạn -->
+            <div style="position: relative;">
+                <img src="{{ asset('frontend/img/banner2.png') }}" 
+                 alt="Banner Image" 
+                 class="banner-image">
+            </div>
+            
+            <div class="banner-overlay">
+                <div class="text-center">
+                    <p class="banner-subtitle lead">
+                        Khám phá những acc tuyệt vời cùng chúng tôi
+                    </p>
+                    {{-- <button class="btn btn-primary btn-lg mt-3 px-4 py-2">
+                        Tìm Hiểu Thêm
+                    </button> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     @yield('main')
     @include('frontend/extends/modal_register_login')

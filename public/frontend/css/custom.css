@@ -17,7 +17,7 @@ body {
     line-height: 1.42857143;
     color: #939393;
     overflow-x: hidden;
-    background: url(../img/bgrcf.jpg) center top no-repeat #000000;
+    background: url(../img/bgrx.png) center top no-repeat #000000;
     
     /* background-color: #f8f8f8 !important; */
     -webkit-background-size: 100% auto;
@@ -2957,3 +2957,82 @@ form .title {
       25% { transform: rotate(0deg); }
       100% { transform: rotate(0deg); } /* Nghỉ */
     }
+.banner-section {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* thay vì max-height */
+    background: #000; /* nền tối để che khoảng trống khi ảnh không fill đủ */
+    border-radius: 10px;
+}
+        
+.banner-image {
+   width: 100%;
+    height: auto;
+    transform: scale(0.8);   /* thu nhỏ còn 80% */
+    transform-origin: center; /* thu nhỏ từ tâm ảnh */
+    position: absolute;
+    top: -288px;
+}
+        
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .banner-title {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-weight: bold;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .banner-subtitle {
+            color: rgba(255,255,255,0.9);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .banner-container {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .banner-image {
+                width: 100%;
+                height: auto;
+                transform: scale(1);
+                transform-origin: center;
+                position: relative;
+                top: 0;
+            }
+            .banner-section {
+                min-height: 300px;
+            }
+            .banner-title {
+                font-size: 1.8rem;
+            }
+        }

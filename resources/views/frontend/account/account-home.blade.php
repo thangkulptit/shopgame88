@@ -18,7 +18,7 @@
                 <div class="a-more">
                     <div class="row">
                         <div class="col-xs-12" style="margin-top: 12px;">
-                            <p class="sl-prbot"><a style="cursor: pointer;" onclick="window.open('{{$item['link']}}')" class="sl-btnod">XEM TẤT CẢ</a></p>
+                            <p class="sl-prbot"><a style="cursor: pointer;" href="{{$item['link']}}" class="sl-btnod">XEM TẤT CẢ</a></p>
                         </div>
                     </div>
                 </div>
