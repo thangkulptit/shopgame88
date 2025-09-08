@@ -12,7 +12,7 @@
                                     style="position:absolute; top:-2px; right:-9px;z-index:99">
                                 <span
                                     style="color:#000; position:absolute; top:8px; right:0px; z-index:99;"><b>-15%</b></span>
-                                <a class="sl-prlinks" target="_blank" href="/mua-acc-{{$item->acc_id}}.html">
+                                <a class="sl-prlinks" href="/mua-acc-{{$item->acc_id}}.html">
                                     <p class="sl-primg">
                                         <img src="{{$item->img_bgr}}">
                                     </p>
