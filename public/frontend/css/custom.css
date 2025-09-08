@@ -530,13 +530,14 @@ label {
     float: left;
     width: 25%;
     padding: 0 5px;
+    height: 360px;
     margin-bottom: 10px;
     position: relative
 }
 
 .sl-prodbox {
     position: relative;
-    background: #1f2228
+    background: #1f2228;
 }
 
 .sl-prlinks {

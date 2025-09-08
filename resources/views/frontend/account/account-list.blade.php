@@ -40,9 +40,6 @@
                                 <div class="sl-prifs">
                                 <span class="sl-prpri sl-prpri1 hidden-xs"><img src="/images/cf/cf.png" width="15"
                                             height="15"></span>
-                                    <span class="sl-prpri sl-prpri2 hidden-xs"
-                                        style="top: 50px; font-size: 12px; text-decoration: line-through; color: #bdc3c7">{{number_format(($item->price)*1.15)}} <sup>ATM</sup></span>
-                                    <span class="sl-prpri sl-prpri2">{{number_format($item->price)}} <sup>ATM</sup></span>
                                     <div class="sl-prifbot">
                                         <ul>
                                             <li>{{$item->content}}</li>
@@ -51,7 +48,8 @@
                                             <li>Cấp: {{ $item->vip_level }}</li>
                                         </ul>
                                     </div>
-                                    <p class="sl-prbot"><a style="cursor: pointer;" onclick="showPopupAcc({{$item->acc_id}});"
+                                    <span class="sl-prpri ">{{number_format($item->price)}} <sup>ATM</sup></span>
+                                    <p><a style="cursor: pointer;" onclick="showPopupAcc({{$item->acc_id}});"
                                             class="sl-btnod">MUA NGAY</a></p>
                                 </div>
                             </div>
