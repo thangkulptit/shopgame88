@@ -48,7 +48,7 @@
                                             <li>Cấp: {{ $item->vip_level }}</li>
                                         </ul>
                                     </div>
-                                    <span class="sl-prpri ">{{number_format($item->price)}} <sup>ATM</sup></span>
+                                    <span class="sl-prpri " style="margin-top: 6px;">{{number_format($item->price)}} <sup>ATM</sup></span>
                                     <p><a style="cursor: pointer;" onclick="showPopupAcc({{$item->acc_id}});"
                                             class="sl-btnod">MUA NGAY</a></p>
                                 </div>
