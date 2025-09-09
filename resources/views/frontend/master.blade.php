@@ -187,7 +187,7 @@
                 {{-- <li><a href="{{url('/huong-dan-mua-acc.html')}}" title="Hướng dẫn mua acc" style="cursor: pointer;">Hướng Dẫn Mua</a></li> --}}
                 {{-- <li><a href="{{url('/nap-the.html')}}" title="NẠP TIỀN" style="cursor: pointer;">Nạp Tiền</a></li> --}}
                 <li><a href="{{url('/')}}" target="_blank">Danh mục account</a></li>
-                <li><a href="https://facebook.com/leanhtuan8886" target="_blank">FB Admin Tuấn LêAnh</a></li>
+                {{-- <li><a href="https://facebook.com/leanhtuan8886" target="_blank">FB Admin Tuấn LêAnh</a></li> --}}
             </ul>
             @if (Auth::guard('users_client')->check())
             <div class="sl-lrins">
@@ -453,12 +453,15 @@
 @if(isset($popup) && $popup && $popup->is_active)
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        Swal.fire({
-            title: {!! json_encode($popup->title) !!},
-            html: {!! json_encode($popup->content) !!},
-            confirmButtonText: 'OK',
-            confirmButtonColor: '#6c5ce7',
-        });
+        if (sessionStorage.getItem('modal') === null) {
+            Swal.fire({
+                title: {!! json_encode($popup->title) !!},
+                html: {!! json_encode($popup->content) !!},
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#6c5ce7',
+            });
+            sessionStorage.setItem('modal', '1');
+        }
     });
     </script>
 @endif

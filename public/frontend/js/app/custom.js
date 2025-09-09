@@ -71,59 +71,12 @@ function loginWithFacebook1(url = '') {
 }
 
 function showPopupAcc(acc) {
-
-    window.open('https://www.facebook.com/leanhtuan8886');
-    // swal({
-    //     title: "Tài Khoản Số #" + acc,
-    //     text: "Bạn có chắc chắn muốn giao dịch tài khoản này ?",
-    //     type: "info",
-    //     showCancelButton: true,
-    //     confirmButtonColor: "#DD6B55",
-    //     confirmButtonText: "Có",
-    //     cancelButtonText: "Không",
-    //     closeOnConfirm: false,
-    //     showLoaderOnConfirm: true
-    // }, function() {
-    //     ajaxSetup();
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "/account/buy",
-    //         data: {
-    //             'id': acc 
-    //         },
-    //         dataType: "json",
-    //         success: function (response) {
-    //             if (response.status && response.isLoggedIn) {
-    //                 swal({
-    //                     title: 'Giao dịch hoàn tất',
-    //                     type: 'success',
-    //                     text: 'Mua thành công tài khoản #' + acc
-    //                 }, function() {
-    //                     location.href = '/lich-su-giao-dich';
-    //                 });
-    //             } else if (!response.status && !response.isLoggedIn){
-    //                 $("#my-modal-login-register").modal('show');
-    //                 swal({
-    //                     title: 'Thông báo',
-    //                     type: 'info',
-    //                     text: 'Chưa đăng nhập. Vui lòng đăng nhập để mua tài khoản'
-    //                 }, function() {
-    //                 });
-    //             } else {
-    //                 swal({
-    //                     title: 'Thông báo',
-    //                     type: 'error',
-    //                     text: response.msg
-    //                 }, function() {
-    //                 });
-                    
-    //             }
-    //         },
-    //         error: function(error){
-    //             toastr.error('Mua acc thất bại');
-    //         }
-    //     });
-    // });
+    Swal.fire({
+        title: "Thông báo",
+        html: "Muốn mua tài khoản này hãy liên hệ trực tiếp cho chúng tôi qua ZALO góc dưới màn hình",
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#6c5ce7',
+    });
 }
 
 $(document).ready(function () {

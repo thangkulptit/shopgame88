@@ -245,3 +245,4 @@ function pushCardToServer(type, amount, seri, code) {
         }
     });
 }
+
