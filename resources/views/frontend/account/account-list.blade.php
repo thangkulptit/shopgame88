@@ -33,7 +33,7 @@
                                             <li>Thông tin: {{$item->content}}</li>
                                             <li>Acc chuyên: {{ $item->vip_main }}</li>
                                             <li>Tên vip: {{ $item->vip_name }}</li>
-                                            <li>Cấp độ vip: {{ $item->vip_level }}</li>
+                                            <li>Vip: {{ $item->vip_level }}</li>
                                         </ul>
                                     </div>
                                 </a>
@@ -45,7 +45,7 @@
                                             <li>{{$item->content}}</li>
                                             <li>Chuyên: {{ $item->vip_main }}</li>
                                             <li>Tên: {{ $item->vip_name }}</li>
-                                            <li>Cấp: {{ $item->vip_level }}</li>
+                                            <li>Vip: {{ $item->vip_level }}</li>
                                         </ul>
                                     </div>
                                     <span class="sl-prpri " style="margin-top: 6px;">{{number_format($item->price)}} <sup>ATM</sup></span>
