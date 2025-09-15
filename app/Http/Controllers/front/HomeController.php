@@ -79,7 +79,7 @@ class HomeController extends Controller
                 return $query->where(['vip_name' => $vip_name]);
             })
             ->when($vip_level, function($query, $vip_level) {
-                return $query->where(['vip_level' => $vip_level]);
+                return $query->where('vip_level', 'like', "%{$vip_level}%");
             })
             ->when($sAcc_id, function($query, $sAcc_id) {
                 return $query->where(['acc_id' => $sAcc_id]);
