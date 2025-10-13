@@ -100,7 +100,7 @@ $listName = [
                     'title' => 'Toàn bộ cửa hàng',
                     'link' => url('/shop-acc-dot-kich.html'),
                     'description' => 'Số account hiện có: '. $counts->range_all,
-                    'bgr' => asset('/images/siu_re.gif'),
+                    'bgr' => asset('/images/siu_vip.gif'),
                 ],
                 [
                     'title' => 'Acc Đột Kích dưới 500k',
@@ -112,7 +112,7 @@ $listName = [
                     'title' => 'Acc Đột Kích 500k - 1tr',
                     'link' => url('/shop-acc-dot-kich.html?price=500k-1tr&type=1'),
                     'description' => 'Số account hiện có: '. $counts->range_500k_1m,
-                    'bgr' => asset('/images/siu_re.gif'),
+                    'bgr' => asset('/images/siu_co.gif'),
                 ],
                 [
                     'title' => 'Acc Đột Kích 1tr - 3tr',
