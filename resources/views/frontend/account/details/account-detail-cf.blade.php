@@ -17,6 +17,8 @@
                     <div class="sa-ttactit clearfix">
                         <h1 class="sa-ttacc-tit">
                             Acc CF #{{$data_account->acc_id}} </h1>
+
+                        <div>HEHE</div>
                     </div>
                 </div>
                 <div class="col-sm-6">

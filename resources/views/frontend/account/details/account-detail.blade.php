@@ -17,6 +17,12 @@
                     <div class="sa-ttactit clearfix">
                         <h1 class="sa-ttacc-tit">
                             Acc CF #{{$data_account->acc_id}} </h1>
+                                <ul style="margin-bottom: 12px;">
+                                    <li>Thông tin: <strong>{{$data_account->content}}</strong></li>
+                                    <li>Acc chuyên: <strong>{{ $data_account->vip_main }}</strong></li>
+                                    <li>Tên vip: <strong>{{ $data_account->vip_name }}</strong></li>
+                                    <li>Vip: <strong>{{ $data_account->vip_level }}</strong></li>
+                                </ul>
                     </div>
                 </div>
                 <div class="col-sm-6">
