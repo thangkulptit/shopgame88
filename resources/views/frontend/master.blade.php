@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="{{asset('/faviconn.ico')}}">
     <meta name="google-site-verification" content="wE3M16EKuyZOCcaJ0h2RIWPUHuGcD0EGwYX1HiqAuQk" />
     <base href="{{asset('frontend')}}/">
-    <title>@yield('title')</title> 
+    <title>@yield('title')</title>
     <meta name="description" content="@yield('description')"/>
     <meta name="keywords" content="@yield('keywords')" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -282,11 +282,11 @@
                                             <table class="table table-striped">
                                                 <tbody class="table-history" id="body-table-content">
                                                     @foreach ($listName as $index => $item)
-                                                     <tr class="{{ $index % 2 == 0 ? 'active' : ''}}"> 
+                                                     <tr class="{{ $index % 2 == 0 ? 'active' : ''}}">
                                                         <td style="width: 30%;"><span class="glyphicon glyphicon-user"></span>{{$item}}</td>
                                                      <td style="width: 15%;">{{ $index < 6 ? $index + $phut : 1 }} {{ ($index) >= 6 ? ' Giờ trước ' : 'Phút trước'}}</td>
                                                         <td style="width: 15%;" class="price-table">
-                                                            @if($index == 0 || $index == 1 || $index == 4) 
+                                                            @if($index == 0 || $index == 1 || $index == 4)
                                                                 {{$price[$index]}}
                                                             @elseif($index == 2 || $index == 5 || $index == 7)
                                                                 {{$price[$index]}}
@@ -297,10 +297,10 @@
                                                             @endif
                                                             <sup>ATM</sup>
                                                         </td>
-                                                        <td style="width: 20%;"> 
-                                                        @if($index == 0 || $index == 1 || $index == 4) 
+                                                        <td style="width: 20%;">
+                                                        @if($index == 0 || $index == 1 || $index == 4)
                                                             {{'Acc Đột Kích'}}
-                                                        @elseif($index == 2 || $index == 5 || $index == 7) 
+                                                        @elseif($index == 2 || $index == 5 || $index == 7)
                                                             {{'Acc Đột Kích'}}
                                                         @elseif($index == 3 || $index == 6)
                                                             {{'Acc Đột Kích'}}
@@ -310,7 +310,7 @@
                                                         </td>
                                                         <td style="width: 20%;">Ngày {{$date}}</td><td></td>
                                                      </tr>
-                                                     @if ($index == 9) 
+                                                     @if ($index == 9)
                                                         @break;
                                                      @endif
                                                     @endforeach
@@ -321,7 +321,7 @@
                                     {{-- <iframe height="400" src="https://www.youtube.com/embed/hrcoBPfLXaM"
                                         width="100%"></iframe> --}}
                                     {{-- <img src="https://www.upsieutoc.com/images/2019/07/09/shopacc.png"
-                                        style="height: 350px;width: 785px;"> 
+                                        style="height: 350px;width: 785px;">
                                     <img src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t31.0-8/26232766_136956847097528_2732797481514157742_o.jpg?_nc_cat=107&amp;oh=f87fdad15a4df7f22bd0f3e5cb28285e&amp;oe=5C1F5A05" style="height: 350px;"> -->
                                 </div>
                             </div>
@@ -330,7 +330,7 @@
                 </div>
             </div> --}}
         </div>
-        
+
           <div class="banner">
             <div class="container position-relative">
             <span class="banner-title">
@@ -338,17 +338,17 @@
             </span>
             </div>
         </div>
-       
+
     </div>
     <div class="container banner-container">
         <div class="banner-section position-relative">
             <!-- Thay đổi src thành đường dẫn hình ảnh của bạn -->
             <div style="position: relative;">
-                <img src="{{ asset('frontend/img/banner2.png') }}" 
-                 alt="Banner Image" 
+                <img src="{{ asset('frontend/img/banner2.png') }}"
+                 alt="Banner Image"
                  class="banner-image">
             </div>
-            
+
             <div class="banner-overlay">
                 <div class="text-center">
                     <p class="banner-subtitle lead">
@@ -372,7 +372,7 @@
         <div class="shop-flex" style="display: flex; flex-direction: column; width: auto; justify-content: center; align-items: center;">
              <strong>Gặp A Tuấn</strong>
             <a href="https://zalo.me/0703989888" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1024px-Icon_of_Zalo.svg.png" alt="Zalo 1">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="Zalo 1">
             </a>
             <strong>0703.989.888</strong>
         </div>
@@ -380,7 +380,7 @@
         <div class="shop-flex" style="margin-left: 64px; display: flex; flex-direction: column;  width: auto; justify-content: center; align-items: center;">
             <strong>Gặp E Việt</strong>
             <a href="https://zalo.me/0879392888" target="_blank" >
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1024px-Icon_of_Zalo.svg.png" alt="Zalo 1">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="Zalo 1">
             </a>
             <strong>0879.392.888</strong>
         </div>
