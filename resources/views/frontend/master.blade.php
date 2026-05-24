@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <link rel="shortcut icon" href="{{asset('/faviconn.ico')}}">
+    <link rel="shortcut icon" href="{{ asset('/faviconn.ico') }}">
     <meta name="google-site-verification" content="wE3M16EKuyZOCcaJ0h2RIWPUHuGcD0EGwYX1HiqAuQk" />
-    <base href="{{asset('frontend')}}/">
+    <base href="{{ asset('frontend') }}/">
     <title>@yield('title')</title>
-    <meta name="description" content="@yield('description')"/>
+    <meta name="description" content="@yield('description')" />
     <meta name="keywords" content="@yield('keywords')" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="{{url('/')}}">
+    <meta property="og:url" content="{{ url('/') }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="@yield('title')">
     <meta property="og:description" content="@yield('description')">
@@ -17,19 +17,22 @@
     <meta property="og:image" content="https://www.upsieutoc.com/images/2019/07/31/BANNER1.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="315">
-    <meta property="og:site_name" content="{{url('/')}}">
+    <meta property="og:site_name" content="{{ url('/') }}">
     <meta name="dc.language" content="vi-VN">
-    <link rel="alternate" href="{{url('/')}}" hreflang="vi-vn" />
+    <link rel="alternate" href="{{ url('/') }}" hreflang="vi-vn" />
     <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155392144-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-155392144-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155392144-1');
     </script>
     <!-- End Google Tag Manager -->
     <style>
@@ -96,22 +99,24 @@
             -o-user-select: none;
             user-select: none;
         }
+
         .banner-img {
             overflow: hidden;
             border-radius: 20px;
-            }
+        }
 
-            .banner-img img {
+        .banner-img img {
             width: 100%;
             height: auto;
             object-fit: cover;
-            }
+        }
 
-            .banner-img-text {
-            background: rgba(0, 0, 0, 0.5); /* nền mờ để chữ dễ đọc */
+        .banner-img-text {
+            background: rgba(0, 0, 0, 0.5);
+            /* nền mờ để chữ dễ đọc */
             padding: 20px;
             border-radius: 10px;
-            }
+        }
     </style>
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -129,7 +134,7 @@
             <div></div>
             <div></div>
             <span
-                style="position: absolute; top: 12vh; left: -1vw; font-family: 'Ma Shan Zheng', cursive; color: #fff; font-size: 25px;">ShopGame88.Com</span>
+                style="position: absolute; top: 12vh; left: -1vw; font-family: 'Ma Shan Zheng', cursive; color: #fff; font-size: 25px;">ShopGame88.Net</span>
         </div>
     </div>
 
@@ -147,93 +152,102 @@
 </head>
 
 <body>
-<!--popup img-->
-<div class="modal fade" id="popImgsda" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="modal-title">@yield('title')</h1>
-                <h2 class="modal-title">@yield('title_h2_1')</h2>
-                <p>@yield('content_seo')</p>
-                <h2 class="modal-title">@yield('title_h2_2')</h2>
-                <h3 class="modal-title">@yield('title_h3_1')</h3>
-                <p>@yield('content_seo_1')</p>
-                <h3 class="modal-title">@yield('title_h3_2')</h3>
-                <h3 class="modal-title">@yield('title_h3_3')</h3>
-            </div>
-            <div class="modal-body">
-                <p class="sa-popimg"><img src="/frontend/images/user.png" alt="@yield('title_h1')">
-                </p>
+    <!--popup img-->
+    <div class="modal fade" id="popImgsda" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <h1 class="modal-title">@yield('title')</h1>
+                    <h2 class="modal-title">@yield('title_h2_1')</h2>
+                    <p>@yield('content_seo')</p>
+                    <h2 class="modal-title">@yield('title_h2_2')</h2>
+                    <h3 class="modal-title">@yield('title_h3_1')</h3>
+                    <p>@yield('content_seo_1')</p>
+                    <h3 class="modal-title">@yield('title_h3_2')</h3>
+                    <h3 class="modal-title">@yield('title_h3_3')</h3>
+                </div>
+                <div class="modal-body">
+                    <p class="sa-popimg"><img src="/frontend/images/user.png" alt="@yield('title_h1')">
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <div class="sl-header">
         <div class="container">
             <span class="sl-icmenu" id="xxx"><i class="glyphicon glyphicon-menu-hamburger"></i></span>
             <a class="sl-logo" href="/" title="Trang chủ">
                 <div>
-                    <strong
-                        style="font-family: sans-serif;  font-size: 1.5vw; color: #ffea00;">SHOPGAME88.COM
+                    <strong style="font-family: sans-serif;  font-size: 1.5vw; color: #ffea00;">SHOPGAME88.Net
                     </strong>
                 </div>
             </a>
             <ul class="sl-menu clearfix">
-                <li class="active"><a href="{{url('/')}}" title="TRANG CHỦ">Trang Chủ</a></li>
+                <li class="active"><a href="{{ url('/') }}" title="TRANG CHỦ">Trang Chủ</a></li>
                 {{-- <li><a href="{{url('/giao-dich-gan-day.html')}}" title="GIAO DỊCH GẦN ĐÂY">Uy Tín Của Shop</a></li> --}}
                 {{-- <li><a href="{{url('/huong-dan-mua-acc.html')}}" title="Hướng dẫn mua acc" style="cursor: pointer;">Hướng Dẫn Mua</a></li> --}}
                 {{-- <li><a href="{{url('/nap-the.html')}}" title="NẠP TIỀN" style="cursor: pointer;">Nạp Tiền</a></li> --}}
-                <li><a href="{{url('/')}}" target="_blank">Danh mục account</a></li>
+                <li><a href="{{ url('/') }}" target="_blank">Danh mục account</a></li>
                 {{-- <li><a href="https://facebook.com/leanhtuan8886" target="_blank">FB Admin Tuấn LêAnh</a></li> --}}
             </ul>
             @if (Auth::guard('users_client')->check())
-            <div class="sl-lrins">
-                <div class="dropdown">
-                    <button type="button" data-toggle="dropdown" role="button" aria-haspopup="true"
-                        aria-expanded="false"><img style="width: 32px;" src="{{url('/frontend/images/user.png')}}">
-                        <strong id="total_money"
-                            data-money="{{Auth::guard('users_client')->user()->money}}">{{number_format(Auth::guard('users_client')->user()->money)}}<sup>đ</sup></strong>
-                        <i></i></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{url('/lich-su-giao-dich')}}" title="Lịch sử giao dịch">Lịch sử giao dịch</a></li>
-                        <li><a class="alogout" href="{{url('/front/logout')}}" title="Đăng xuất">Đăng xuất</a></li>
-                    </ul>
+                <div class="sl-lrins">
+                    <div class="dropdown">
+                        <button type="button" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><img style="width: 32px;"
+                                src="{{ url('/frontend/images/user.png') }}">
+                            <strong id="total_money"
+                                data-money="{{ Auth::guard('users_client')->user()->money }}">{{ number_format(Auth::guard('users_client')->user()->money) }}<sup>đ</sup></strong>
+                            <i></i></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('/lich-su-giao-dich') }}" title="Lịch sử giao dịch">Lịch sử giao
+                                    dịch</a></li>
+                            <li><a class="alogout" href="{{ url('/front/logout') }}" title="Đăng xuất">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
             @else
-            <ul class="sl-logreg clearfix">
-                <li><a class="sl-reglink" id="register-modal" title="Đăng ký">Đăng ký</a> </li>
-                <li><a class="sl-loglink" id="login-modal" title="Đăng nhập">Đăng nhập</a> </li>
-            </ul>
+                <ul class="sl-logreg clearfix">
+                    <li><a class="sl-reglink" id="register-modal" title="Đăng ký">Đăng ký</a> </li>
+                    <li><a class="sl-loglink" id="login-modal" title="Đăng nhập">Đăng nhập</a> </li>
+                </ul>
             @endif
         </div>
     </div>
-        <div class="sl-prodbox">
-          <style>
+    <div class="sl-prodbox">
+        <style>
             .banner {
-            color: #fff;
-            padding: 12px 0;
-            overflow: hidden;
-            position: relative;
-            height: 60px;
+                color: #fff;
+                padding: 12px 0;
+                overflow: hidden;
+                position: relative;
+                height: 60px;
             }
+
             .banner-title {
-            position: absolute;
-            white-space: nowrap;
-            font-size: 1.25rem;
-            font-weight: bold;
-            animation: slideText 10s linear infinite;
+                position: absolute;
+                white-space: nowrap;
+                font-size: 1.25rem;
+                font-weight: bold;
+                animation: slideText 10s linear infinite;
             }
+
             @keyframes slideText {
-            0%   { left: 100%; }
-            100% { left: -100%; }
+                0% {
+                    left: 100%;
+                }
+
+                100% {
+                    left: -100%;
+                }
             }
         </style>
 
-         <div class="container">
+        <div class="container">
 
             {{-- <h2></h2> --}}
             {{-- <div class="sl-boxs">
@@ -286,7 +300,7 @@
                                                         <td style="width: 30%;"><span class="glyphicon glyphicon-user"></span>{{$item}}</td>
                                                      <td style="width: 15%;">{{ $index < 6 ? $index + $phut : 1 }} {{ ($index) >= 6 ? ' Giờ trước ' : 'Phút trước'}}</td>
                                                         <td style="width: 15%;" class="price-table">
-                                                            @if($index == 0 || $index == 1 || $index == 4)
+                                                            @if ($index == 0 || $index == 1 || $index == 4)
                                                                 {{$price[$index]}}
                                                             @elseif($index == 2 || $index == 5 || $index == 7)
                                                                 {{$price[$index]}}
@@ -298,7 +312,7 @@
                                                             <sup>ATM</sup>
                                                         </td>
                                                         <td style="width: 20%;">
-                                                        @if($index == 0 || $index == 1 || $index == 4)
+                                                        @if ($index == 0 || $index == 1 || $index == 4)
                                                             {{'Acc Đột Kích'}}
                                                         @elseif($index == 2 || $index == 5 || $index == 7)
                                                             {{'Acc Đột Kích'}}
@@ -320,7 +334,7 @@
                                     </div>
                                     {{-- <iframe height="400" src="https://www.youtube.com/embed/hrcoBPfLXaM"
                                         width="100%"></iframe> --}}
-                                    {{-- <img src="https://www.upsieutoc.com/images/2019/07/09/shopacc.png"
+            {{-- <img src="https://www.upsieutoc.com/images/2019/07/09/shopacc.png"
                                         style="height: 350px;width: 785px;">
                                     <img src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t31.0-8/26232766_136956847097528_2732797481514157742_o.jpg?_nc_cat=107&amp;oh=f87fdad15a4df7f22bd0f3e5cb28285e&amp;oe=5C1F5A05" style="height: 350px;"> -->
                                 </div>
@@ -331,11 +345,12 @@
             </div> --}}
         </div>
 
-          <div class="banner">
+        <div class="banner">
             <div class="container position-relative">
-            <span class="banner-title">
-                🎉 Chào mừng bạn đến với Shopgame88.Com! Mua bán, cầm cố, treo acc CF Bán GO - Cày Item AI giá rẻ | Liên hệ ngay Zalo để nhận tư vấn🎉
-            </span>
+                <span class="banner-title">
+                    🎉 Chào mừng bạn đến với Shopgame88.Net! Mua bán, cầm cố, treo acc CF Bán GO - Cày Item AI giá rẻ |
+                    Liên hệ ngay Zalo để nhận tư vấn🎉
+                </span>
             </div>
         </div>
 
@@ -344,9 +359,7 @@
         <div class="banner-section position-relative">
             <!-- Thay đổi src thành đường dẫn hình ảnh của bạn -->
             <div style="position: relative;">
-                <img src="{{ asset('frontend/img/banner2.png') }}"
-                 alt="Banner Image"
-                 class="banner-image">
+                <img src="{{ asset('frontend/img/banner2.png') }}" alt="Banner Image" class="banner-image">
             </div>
 
             <div class="banner-overlay">
@@ -366,34 +379,38 @@
 
     @yield('main')
     @include('frontend/extends/modal_register_login')
-          <!-- Icon Zalo và Facebook -->
-  <div class="social-icons">
-    <div class="shop-flex" style="display: flex !important;">
-        <div class="shop-flex" style="display: flex; flex-direction: column; width: auto; justify-content: center; align-items: center;">
-             <strong>Gặp A Tuấn</strong>
-            <a href="https://zalo.me/0703989888" target="_blank">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="Zalo 1">
-            </a>
-            <strong>0703.989.888</strong>
-        </div>
+    <!-- Icon Zalo và Facebook -->
+    <div class="social-icons">
+        <div class="shop-flex" style="display: flex !important;">
+            <div class="shop-flex"
+                style="display: flex; flex-direction: column; width: auto; justify-content: center; align-items: center;">
+                <strong>Gặp A Tuấn</strong>
+                <a href="https://zalo.me/0703989888" target="_blank">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg=="
+                        alt="Zalo 1">
+                </a>
+                <strong>0703.989.888</strong>
+            </div>
 
-        <div class="shop-flex" style="margin-left: 64px; display: flex; flex-direction: column;  width: auto; justify-content: center; align-items: center;">
-            <strong>Gặp E Việt</strong>
-            <a href="https://zalo.me/0879392888" target="_blank" >
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg==" alt="Zalo 1">
-            </a>
-            <strong>0879.392.888</strong>
-        </div>
+            <div class="shop-flex"
+                style="margin-left: 64px; display: flex; flex-direction: column;  width: auto; justify-content: center; align-items: center;">
+                <strong>Gặp E Việt</strong>
+                <a href="https://zalo.me/0879392888" target="_blank">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEbElEQVR4nO2Yj2sbZRjHr/qXTJi9q7K6OkU7XEXBCYIKm+jQjdxt1s0yp2UwGXTdSkfRDjcV3UCxyBTqj+HEMrC1ndPZHxuiXR1NOzvX1nZtmve9ND+bn195bk16SXNpLtckBfPAF8LlyeX7ufd53/e5VxBKUYpS/P8CQJnL5XqQc97IGLvIOR/hnHs558hSlDtMv2WMHVNVtaowzl/A3Rtexc6Oyx7VhNlsZXc6ndvp4eTF+717sE6Ucen0ef9qG0eK+lRVXbeq5itseEKS4d57MgTG8moeJMbYHOe8ZlXMl9uwVZKx8HBdDGMTrryb50sQQcsQkg3rRQWqpACf/OArmHmuG4ncy6kRd4kK+sl8TX0UM47CmudL6s1pYlfIkMk86aPv8j5xkUlOp3ObaQBRwXUyv6EWGJtQiwrAOR82ZV5SsCX+9He1hIptHiRVVTeaAWhZK+XDF8UYO5p9+ci4FAfouuJeKwDdZgAm4wCjtwq39vPMspspIX8cIN3y+fLxsPadkQZHVoamvBPtATMAHjMACTOOueU3a7vgw/GzgSQ9/XZEy2/4bCGR1zXgxgfn/Pii04vxKRWdAx4M3XAZAnQt5tP90618OQFMTK+8hF7o9eD+PYD8bghzTo5ZB8e+U8GkUaFWRG9a/3k2Tf6j+2P4ccBjHeDGeOZy6B+aR9XeGJ45HEnAtrYHULEbOH3eh4kpFVf+msdzDRFDgFaD/Oo3qP9SrQFcGzUGoAlObcZjb0Zhv7mUt/lAFNS56nMHhuYNATZnyKdysgTQd20+rfmpGRXPNkTwwGsx9A4mL7WVtUBj29JcINEcMAKozJBPc8ISwLcXvcvMOxlH7Xsh3Lcb+P6X5Dol7WgO4/H6qFYO8Wu0IRoB7MiQ/9NVtzWA1vblOzGtNPTd80ci2hPS66turzYvqIciU0faFjRYqnEjgH6D/Lr3g9YncepNaI3PtAfsOxlMmKInW1kbw5MHo9qDeGR/LGFa/5kn5QNb3oriRLt/2RKeE8BTh6JmNpu8SsgFINuddW0ByHDrAWg4i22ec+4zAzCiB6CaTNdSFFKMsVtmAHpSy+jTDl+xAXqyB1BwLBWg+kAM/0wW79WSMdaUNYBoQ1W6JbL+42AxAaqzBhAElEky7KkAtPP+e7vwo8AYGxTMRoWM7akA1DLPOIpSRq+YBlgchT49wM6WcMHND99U/875xJpOpCUZc2SeWoLUrnNsXMUf9vTdqlVNTqv48JwvcPhMaJNgJUQZNaKC4MEzQXRfdaPjNw9OfePHS81hbU4Q3NZDEdCxO7XAVkzPOrj2FkbN4kN10QCdilsyr4eIj0QmUSP2YlMYTZ8H8HWPFz//7sbQqEsDuz17B44OCegti67/+qcbX3Z60Xw2AKU1hE2v33ntFGXwVTOfUk69K0FYlozL62XcI+QnUFauYJukYHi1jYsKrosydtF/CIUIScFGScZRUUE3AYkyPCYMByQZ0/RbUcE75TZUF8x4KUpRCmFNxX8QRqbiSsmKAQAAAABJRU5ErkJggg=="
+                        alt="Zalo 1">
+                </a>
+                <strong>0879.392.888</strong>
+            </div>
 
-        {{-- <a href="https://www.facebook.com/leanhtuan8886" target="_blank" style="margin-left: 64px;">
+            {{-- <a href="https://www.facebook.com/leanhtuan8886" target="_blank" style="margin-left: 64px;">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
         </a> --}}
 
-        {{-- <a href="tel:0703989888" title="Gọi ngay: 0379 439 678" style="margin-left: 64px;  width: auto;">
+            {{-- <a href="tel:0703989888" title="Gọi ngay: 0379 439 678" style="margin-left: 64px;  width: auto;">
         <img src="data:image/png;base64,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" class="fas fa-phone"></i>
         </a> --}}
+        </div>
     </div>
-  </div>
     </div>
     {{-- <div class="sl-footer">
         @include('frontend/extends/comment')
@@ -417,7 +434,7 @@
             <ul class="footer-ul">
 
                 @foreach ($global_list as $index => $item)
-                    <li><a href="{{url($item['link'])}}">{{ $item['title'] }}</a></li>
+                    <li><a href="{{ url($item['link']) }}">{{ $item['title'] }}</a></li>
                 @endforeach
             </ul>
         </div>
@@ -450,22 +467,23 @@
     <div hidden>@yield('keywords')</div>
 </body>
 
-@if(isset($popup) && $popup && $popup->is_active)
+@if (isset($popup) && $popup && $popup->is_active)
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        if (sessionStorage.getItem('modal') === null) {
-            Swal.fire({
-                title: {!! json_encode($popup->title) !!},
-                html: {!! json_encode($popup->content) !!},
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#6c5ce7',
-            });
-            sessionStorage.setItem('modal', '1');
-        }
-    });
+        document.addEventListener("DOMContentLoaded", function() {
+            if (sessionStorage.getItem('modal') === null) {
+                Swal.fire({
+                    title: {!! json_encode($popup->title) !!},
+                    html: {!! json_encode($popup->content) !!},
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#6c5ce7',
+                });
+                sessionStorage.setItem('modal', '1');
+            }
+        });
     </script>
 @endif
 <script>
     loading('hide');
 </script>
+
 </html>
